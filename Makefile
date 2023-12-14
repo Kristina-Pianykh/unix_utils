@@ -20,5 +20,8 @@ wgrep: wgrep.c
 wzip: wzip.c
 	$(CC) $(CFLAGS) -o wzip wzip.c
 
+wunzip: wunzip.c
+	$(CC) $(CFLAGS) -o wunzip wunzip.c
+
 clean:
 	$(RM) wcat wgrep wzip
