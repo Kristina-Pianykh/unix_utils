@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-input_file=random.txt
-cmp_file=output.z
-dcmp_file=dcmp_$input_file
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+input_file=${SCRIPT_DIR}/random.txt
+cmp_file=$SCRIPT_DIR/output.z
+dcmp_file=${SCRIPT_DIR}/dcmp_random.txt
 
 # generate a random file of 10MG
 dd if=/dev/urandom of=$input_file bs=1M count=10
