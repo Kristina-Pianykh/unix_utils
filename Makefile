@@ -24,4 +24,7 @@ wunzip: wunzip.c
 	$(CC) $(CFLAGS) -o wunzip wunzip.c
 
 clean:
-	$(RM) wcat wgrep wzip
+	$(RM) wcat wgrep wzip wunzip *.z
+
+test_compression:
+	./test_compression.sh
