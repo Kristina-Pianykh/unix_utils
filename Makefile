@@ -23,8 +23,17 @@ wzip: wzip.c
 wunzip: wunzip.c
 	$(CC) $(CFLAGS) -o wunzip wunzip.c
 
+byte_int: byte_int.c
+	$(CC) $(CFLAGS) -o byte_int byte_int.c
+
+reverse: reverse.c
+	$(CC) $(CFLAGS) -o reverse reverse.c
+
 clean:
-	$(RM) wcat wgrep wzip wunzip *.z
+	$(RM) wcat wgrep wzip reverse wunzip *.z
 
 test_compression:
 	./test_compression.sh
+
+test_reverse:
+	./test_reverse.sh
