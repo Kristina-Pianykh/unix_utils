@@ -14,5 +14,5 @@ make wzip wunzip
 ./wzip $input_file > $cmp_file
 ./wunzip $cmp_file > $dcmp_file
 
-diff $input_file $dcmp_file
+diff -q $input_file $dcmp_file
 rm $input_file $cmp_file $dcmp_file
