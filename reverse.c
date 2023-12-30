@@ -17,7 +17,7 @@ struct linked_list {
 
 
 struct node *alloc_node() {
-    struct node *next_node = calloc(1, sizeof(struct node *));
+    struct node *next_node = calloc(1, sizeof(struct node));
 
     if (next_node == NULL) {
         fprintf(stderr, "Node allocation failed\n");
