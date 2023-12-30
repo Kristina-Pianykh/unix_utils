@@ -29,7 +29,7 @@ struct node *alloc_node() {
 
 
 char *alloc_line(size_t nbytes) {
-    char *line = calloc(1, nbytes);
+    char *line = calloc(1, nbytes + 1); // +1 for null terminator
 
     if (line == NULL) {
         fprintf(stderr, "Line allocation failed\n");
@@ -81,7 +81,6 @@ void free_nodes(struct linked_list *linked_list, FILE *out_stream) {
 }
 
 void append(struct linked_list *linked_list, char *line, size_t nbytes) {
-    /* struct node *node = calloc(1, sizeof(struct node)); */
     struct node *node = alloc_node();
     node->prev = linked_list->last_node;
     node->next = NULL;
