@@ -19,9 +19,6 @@ wzip: wzip.c
 wunzip: wunzip.c
 	$(CC) $(CFLAGS) -o wunzip wunzip.c
 
-byte_int: byte_int.c
-	$(CC) $(CFLAGS) -o byte_int byte_int.c
-
 reverse: reverse.c
 	$(CC) $(CFLAGS) -o reverse reverse.c
 
