@@ -4,12 +4,8 @@ CC = gcc
 # compiler flags:
 #  -g    adds debugging information to the executable file
 #  -Wall turns on most, but not all, compiler warnings
-CFLAGS  = -Wall -Werror
-
-# the build target executable:
-# TARGET = myprog
-
-all: wcat wgrep wzip
+all: wcat wgrep wzip wunzip reverse
+CFLAGS  = -Wall -Werror -g
 
 wcat: wcat.c
 	$(CC) $(CFLAGS) -o wcat wcat.c
